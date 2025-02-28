@@ -107,7 +107,7 @@ section {
 }
 
 .mc-field-group input {
-    width: 50vw;
+    width: 100%;
     padding: 10px;
     border: 1px solid white;
     background: black;
@@ -121,7 +121,7 @@ section {
 
 /* Submit Button */
 #mc-embedded-subscribe {
-    width: 50vw;
+    width: 100%;
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     border: 1px solid white;
@@ -131,5 +131,6 @@ section {
 }
 
 #mc-embedded-subscribe:hover {
-    background: gray;
+    background: white;
+    color: black;
 }
