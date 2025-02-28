@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Augusta Ninpo</title>
+    <link rel="stylesheet" href="styles3.css">
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("show");
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="menu" class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="selfdefense.html">Self Defense</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            var button = document.querySelector(".hamburger");
+            if (menu.classList.contains("show")) {
+                menu.classList.remove("show");
+                button.innerHTML = "☰";
+            } else {
+                menu.classList.add("show");
+                button.innerHTML = "✖";
+            }
+        }
+    </script>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+    
+        <!-- Category Selection -->
+        <div class="faq-category-selection">
+            <label for="faq-category">Choose a category:</label>
+            <select id="faq-category" onchange="switchCategory()">
+                <option value="class-questions" selected>Class Questions</option>
+                <option value="ninpo-questions">Ninpo Questions</option>
+            </select>
+        </div>
+    
+        <!-- FAQ Container -->
+        <div class="faq-container">
+            <!-- Class Questions (Default Visible) -->
+            <div id="class-questions" class="faq-content">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>What is a training session like?</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <p class="faq-answer">A normal training session with our group is two hours. Some will be indoors, some will be outdoors. The main sections to expect are taihenjutsu (movement, including rolls, crawls, leaps etc.), meditation, taijutsu (unarmed combat technique) various weapons, and drills/sparring. Often, weather permitting, we will meet at a specific outdoors location to work on outdoor skills such as camouflage, stealth movement, tracking, overland travel, etc.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>What do I need to get started?</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <p class="faq-answer">Students are required to supply their own uniform and training tools such as weapons. However, to get started you just need long atheltic pants and an athletic shirt or T-shirt, preferably dark in color, plus heavy socks for indoor practice and appropriate footwear for outdoor practice. You will need to have your first uniform, belt, and weapon (a wooden daito) when you pass your first belt test, usually at around 3 months. We can make recommendations to hel you find appropriate gear.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>Are there any discounts available for class fees?</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <p class="faq-answer">Everyone's first class is always free. Additionally, if you bring someone with you and they sign up for at least one month, you get a month free. We also occasionally offer promotions to encourage students to bring in friends or family members.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>How do students advance?</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <p class="faq-answer">Like many martial arts you may be familiar with, we use a belt system to gauge advancement and level. The Kyu System (Fundamentals) has ten levels signified by colored belts. Students will take a test to demonstrate proficiency with their level before being awarded the belt for that level. Students do not wear a belt until they have passed their first test.</p>
+                </div>
+            </div>
+    
+            <!-- Ninpo Questions (Hidden by Default) -->
+            <div id="ninpo-questions" class="faq-content" style="display: none;">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>What kind of unarmed fighting techniques will I train in?</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <p class="faq-answer">Ninpo taijutsu includes both percussive striking as well as grappling (locks, takedowns, throws, chokes, submissions).</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>What kind of weapons will I train in?</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <p class="faq-answer">Within your first few belts alone you will train in the fundamentals of the katana/daito, 6 foot staff (rokushakubo), 3 foot staff (hanbo or sanshakubo), knife (tanto), thrown weapons (shuriken), and weighted chain (manriki kusari). There are many more weapons as you progress through the ranks.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <span>What makes Ninpo different?</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <p class="faq-answer">In a sporting mindset you expect to see two trained champions or athletes competing to see who's the best. They will most often be in the same weight class with no hidden weapons and no friends jumping in to help them win.<br><br>However, historical Shinobi were primarily intelligence gatherers who often had to operate in unfriendly territory. They had to get onto their objective and stay there. Sometimes for years, with minimal support. Ultimately they would obtain whatever information they were after and then their job was to safely exfiltrate from the objective and deliver the information to their superiors.<br><br>In other words, fighting for glory was the last thing they wanted since it would attract a lot of attention and endanger their mission. Also, if something went wrong they could expect to be badly outnumbered by heavily armed opposition.<br><br>Therefore, we approach life with a mindset that the obstacles we face may appear at unexpected times and with unfair advantage. Our martial art begins with zanshin (awareness), prepares us to deal with the unexpected, teaches us the wisdom of enduring instead of leaping to any challenge, and allows us to move freely through life when we wish, almost as if we were invisible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function switchCategory() {
+            var selectedCategory = document.getElementById("faq-category").value;
+            document.getElementById("class-questions").style.display = selectedCategory === "class-questions" ? "block" : "none";
+            document.getElementById("ninpo-questions").style.display = selectedCategory === "ninpo-questions" ? "block" : "none";
+        }
+    
+        function toggleAnswer(questionElement) {
+            var answer = questionElement.nextElementSibling;
+            var arrow = questionElement.querySelector(".faq-arrow");
+    
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                arrow.textContent = "▼";
+            } else {
+                answer.style.display = "block";
+                arrow.textContent = "▲";
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

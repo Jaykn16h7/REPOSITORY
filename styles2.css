@@ -1,0 +1,135 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    line-height: 35px;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    z-index: 2;
+}
+
+.logo {
+    width: 50px;
+}
+
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 3;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu.show {
+    transform: translateY(0);
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Section Styles */
+section {
+    margin-top: 80px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}
+
+/* Form Styles */
+#mc_embed_signup {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#mc_embed_signup h2 {
+    text-align: left;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Form Input Fields */
+.mc-field-group {
+    margin-bottom: 15px;
+}
+
+.mc-field-group label {
+    display: block;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.mc-field-group input {
+    width: 50vw;
+    padding: 10px;
+    border: 1px solid white;
+    background: black;
+    color: white;
+    font-size: 16px;
+}
+
+.mc-field-group input::placeholder {
+    color: #ccc;
+}
+
+/* Submit Button */
+#mc-embedded-subscribe {
+    width: 50vw;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#mc-embedded-subscribe:hover {
+    background: gray;
+}
