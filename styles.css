@@ -98,6 +98,10 @@ body {
     padding: 0px 20px;
 }
 
+.phone {
+    text-decoration: none;
+}
+
 .background-text {
     position: relative;
     background: url('style2.jpg') no-repeat center center/cover;
